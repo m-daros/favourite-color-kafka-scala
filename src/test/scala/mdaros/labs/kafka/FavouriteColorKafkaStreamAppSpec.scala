@@ -30,7 +30,7 @@ class FavouriteColorKafkaStreamAppSpec extends AnyFeatureSpec
 
     Scenario ( "Valid topology" ) {
 
-      Given ( s"I have an inpout topic ${Topics.FAVOURITE_COLOR_INPUT} and an ouput topic ${Topics.FAVOURITE_COLOR_OUTPUT}" )
+      Given ( s"I have an inpout topic ${Topics.FAVOURITE_COLOR_INPUT} and an output topic ${Topics.FAVOURITE_COLOR_OUTPUT}" )
 
       val input = testDriver.createInputTopic [ String, String ] ( Topics.FAVOURITE_COLOR_INPUT, new StringSerializer (), new StringSerializer () )
       val output = testDriver.createOutputTopic [ String, java.lang.Long ] ( Topics.FAVOURITE_COLOR_OUTPUT, new StringDeserializer (), new LongDeserializer () )
