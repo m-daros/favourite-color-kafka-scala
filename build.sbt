@@ -24,6 +24,7 @@ lazy val root = ( project in file ( "." ) )
 
       // Test dependencies
       scalaTest,
-      "org.mockito" %% "mockito-scala" % "1.16.49" % Test
+      "org.mockito" %% "mockito-scala" % "1.16.49" % Test,
+      "org.apache.kafka" % "kafka-streams-test-utils" % kafkaVersion % Test
     )
   )
